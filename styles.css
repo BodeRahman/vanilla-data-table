@@ -7,7 +7,8 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    color: #6E6893;
+    color: #6E6893 !important;
+
 }
 
 a.active {
