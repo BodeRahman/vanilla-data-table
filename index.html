@@ -25,27 +25,41 @@
       <div class="container">
         <header>
             <div class="row">
-                <ul class="col-8 nav">
+                <ul class="col-8 nav nav-tabs">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">All</a>
+                      <a class="nav-link active" aria-current="page" href="#" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">All</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Paid</a>
+                      <a class="nav-link" href="#" id="paid-tab" data-bs-toggle="tab" data-bs-target="#paid-tab-pane" type="button" role="tab" aria-controls="paid-tab-pane" aria-selected="false">Paid</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Unpaid</a>
+                      <a class="nav-link" href="#" id="unpaid-tab" data-bs-toggle="tab" data-bs-target="#unpaid-tab-pane" type="button" role="tab" aria-controls="unpaid-tab-pane" aria-selected="false">Unpaid</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link">Overdue</a>
+                      <a class="nav-link" id="overpaid-tab" data-bs-toggle="tab" data-bs-target="#overpaid-tab-pane" type="button" role="tab" aria-controls="overpaid-tab-pane" aria-selected="false">Overdue</a>
                     </li>
                 </ul>
            
-                <span class="col-4 mt-1 total d-flex justify-content-end">
+                <span class="col-4 mt-1 nav-tabs total d-flex justify-content-end">
                     Total payable amount: $900.00 USD
                 </span> 
             </div>        
         </header>
-        <div id="myGrid" class="ag-theme-alpine" style="height: 500px; margin-top:50px;"></div>
+        <div class="row">
+          <div class="col-10">
+            <button type="button" class="btn btn-outline"><img src="assets/icons/Vector.png"/><span class="filter">filter</span></button>
+            <span class="">
+              <input type="text" class="searcher"  placeholder="Search..">
+            </span>
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-inf">PAY DUES</button>
+          </div>
+        </div>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active ag-theme-alpine" style="height: 500px; margin-top:50px;" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0"></div> 
+          <div class="tab-pane fade show active ag-theme-alpine" style="height: 500px; margin-top:50px;" id="paid-tab-pane" role="tabpanel" aria-labelledby="paid-tab" tabindex="0"></div>      
+        </div>
       <div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
