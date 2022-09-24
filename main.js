@@ -1,20 +1,31 @@
 const columnDefs = [
+  
 ];
 const gridOptions = {
 
     defaultColDef: {
         sortable: true,
         filter: 'agTextColumnFilter',
-        resizable: true
+        resizable: true,
+        headerCheckboxSelection: isFirstColumn,
+        checkboxSelection: isFirstColumn,
     },
-
+    
+    suppressRowClickSelection: true,
+    rowSelection: 'multiple',
     columnDefs: columnDefs,
     enableSorting: true,
     enableFilter: true,
-    pagination: true
+    pagination: true,
 };
 
-const eGridDiv = document.querySelector('#myGrid');
+function isFirstColumn(params) {
+  var displayedColumns = params.columnApi.getAllDisplayedColumns();
+  var thisIsFirstColumn = displayedColumns[0] === params.column;
+  return thisIsFirstColumn;
+}
+
+const eGridDiv = document.querySelector('#all-tab-pane');
 
 new agGrid.Grid(eGridDiv, gridOptions);
 
