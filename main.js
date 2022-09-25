@@ -2,22 +2,23 @@ const columnDefs = [
   
 ];
 const gridOptions = {
-
-    defaultColDef: {
-        sortable: true,
-        filter: 'agTextColumnFilter',
-        resizable: true,
-        headerCheckboxSelection: isFirstColumn,
-        checkboxSelection: isFirstColumn,
-    },
+  
+  defaultColDef: {
+    sortable: true,
+    filter: 'agTextColumnFilter',
+    resizable: true,
+    headerCheckboxSelection: isFirstColumn,
+    checkboxSelection: isFirstColumn,
     
-    suppressRowClickSelection: true,
-    rowSelection: 'multiple',
-    columnDefs: columnDefs,
-    enableSorting: true,
-    enableFilter: true,
-    pagination: true,
-};
+  },
+
+  suppressRowClickSelection: true,
+  rowSelection: 'multiple',
+  columnDefs: columnDefs,
+  enableSorting: true,
+  enableFilter: true,
+  pagination: true,
+}
 
 function isFirstColumn(params) {
   var displayedColumns = params.columnApi.getAllDisplayedColumns();
