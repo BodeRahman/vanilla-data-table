@@ -8,7 +8,6 @@
     font-size: 14px;
     line-height: 17px;
     color: #6E6893 !important;
-
 }
 
 a.active {
@@ -41,14 +40,17 @@ hr {
     margin-bottom: 4px;
 }
 
-.btn-outline {
+.b {
     color: #25213B;
     background-color: #ffffff;
-    border-color: #6E6893;
+    border-color: #6D5BD0;
+    border-radius: 5px;
     font-weight: bold;
+    height: 40px;
+    
 }
 
-.btn-outline:hover .btn-inf:hover {
+.b:hover .btn-inf:hover {
     color: #fff !important;
     text-decoration: none;  
 }
@@ -100,3 +102,11 @@ th {
     color: #6E6893;
 }
 
+.ag-theme-alpine {
+    --ag-foreground-color: rgb(126, 46, 132);
+    --ag-header-background-color: #F4F2FF;
+    --ag-odd-row-background-color: #F4F2FF;
+    --ag-header-column-resize-handle-color: rgb(126, 46, 132);
+    --ag-font-size: 17px;
+   
+}
