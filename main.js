@@ -38,16 +38,6 @@ function dynamicallyConfigureColumnsFromObject(anObject){
     gridOptions.api.setColumnDefs(colDefs);
 }
 
-// simple JSON example
-
-// fetch('https://cornie-assessment.herokuapp.com/users/6iC46vxqNsvax5y').then(function (response) {
-//     return response.json();
-// }).then(function (data) {
-//     dynamicallyConfigureColumnsFromObject(data[0])
-//     gridOptions.api.setRowData(data);
-// })
-
-// SWAPI example
 
 fetch('https://cornie-assessment.herokuapp.com/users/6iC46vxqNsvax5y',
     { 
@@ -62,3 +52,4 @@ fetch('https://cornie-assessment.herokuapp.com/users/6iC46vxqNsvax5y',
     dynamicallyConfigureColumnsFromObject(data.data[0])
     gridOptions.api.setRowData(data.data);
 })
+
